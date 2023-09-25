@@ -73,14 +73,9 @@ CREATE TABLE claims (
     clam_processed_Date date,
     clam_processed_by int,
     clam_remarks varchar(1000),
-    clam_status character(4)
+    clam_status character(4),
+	pay_status VARCHAR(12)
 );
-
-ALTER TABLE claims
-ADD COLUMN pay_status VARCHAR(8);
-
-ALTER TABLE claims
-ALTER COLUMN pay_status TYPE VARCHAR(12);
 
 UPDATE claims
 SET pay_status = 'Pending...';
