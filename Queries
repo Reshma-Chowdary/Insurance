@@ -21,3 +21,94 @@ VALUES
   ('P8', 'C8', 'CL8', 'H8', 1300, '2023-09-08'),
   ('P9', 'C9', 'CL9', 'H9', 1700, '2023-09-09'),
   ('P10', 'C10', 'CL10', 'H10', 1100, '2023-09-10');
+
+
+CREATE TABLE Settlements (
+    stmt_id serial PRIMARY KEY,
+    tran_id int,
+    payment_Processed_date date,
+    claim_id int,
+    tran_amnt double precision
+);
+ALTER TABLE Settlements
+RENAME COLUMN tran_date TO payment_Processed_date;
+select * from claims
+select * from Settlements
+select * from Transactionss
+CREATE TABLE Transactionss (
+    tran_id int PRIMARY KEY,
+    tran_date date,
+    claim_id int
+);
+-- Insert data with claim_id ranging from 101 to 121
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (1, '2023-09-01', 101);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (2, '2023-09-02', 102);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (3, '2023-09-03', 103);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (4, '2023-09-04', 104);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (5, '2023-09-05', 105);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (6, '2023-09-06', 106);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (7, '2023-09-07', 107);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (8, '2023-09-08', 108);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (9, '2023-09-09', 109);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (10, '2023-09-10', 110);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (11, '2023-09-11', 111);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (12, '2023-09-12', 112);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (13, '2023-09-13', 113);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (14, '2023-09-14', 114);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (15, '2023-09-15', 115);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (16, '2023-09-16', 116);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (17, '2023-09-17', 117);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (18, '2023-09-18', 118);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (19, '2023-09-19', 119);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (20, '2023-09-20', 120);
+
+CREATE TABLE claims (
+    clam_id int PRIMARY KEY,
+    clam_source character(4),
+    clam_type character(4),
+    clam_date date,
+    clam_amount_requested numeric,
+    clam_iplc_id int,
+    clam_processed_amount numeric(8,2),
+    clam_processed_Date date,
+    clam_processed_by int,
+    clam_remarks varchar(1000),
+    clam_status character(4)
+);
+
+ALTER TABLE claims
+ADD COLUMN pay_status VARCHAR(8);
+
+ALTER TABLE claims
+ALTER COLUMN pay_status TYPE VARCHAR(12);
+
+UPDATE claims
+SET pay_status = 'Pending...';
+
+CREATE TABLE Transactionss (
+    tran_id int PRIMARY KEY,
+    tran_date date,
+    claim_id int
+);
+
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (1, '2023-09-01', 101);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (2, '2023-09-02', 102);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (3, '2023-09-03', 103);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (4, '2023-09-04', 104);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (5, '2023-09-05', 105);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (6, '2023-09-06', 106);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (7, '2023-09-07', 107);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (8, '2023-09-08', 108);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (9, '2023-09-09', 109);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (10, '2023-09-10', 110);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (11, '2023-09-11', 111);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (12, '2023-09-12', 112);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (13, '2023-09-13', 113);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (14, '2023-09-14', 114);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (15, '2023-09-15', 115);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (16, '2023-09-16', 116);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (17, '2023-09-17', 117);
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (18, '2023-09-18', 118);
+
+INSERT INTO Transactionss (tran_id, tran_date, claim_id) VALUES (2, '2023-09-02', 102);
+
