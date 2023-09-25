@@ -1,0 +1,6 @@
+com\insurance\Payments\Controllers\PaymentController.class
+com\insurance\Payments\Contractors\PaymentDao.class
+com\insurance\Payments\Models\Payments.class
+com\insurance\Payments\PaymentsApplication.class
+com\insurance\Payments\RowMappers\PaymentMapper.class
+com\insurance\Payments\Repositories\PaymentDaoImpl.class
