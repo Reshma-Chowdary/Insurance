@@ -1,0 +1,23 @@
+//Payments Table
+CREATE TABLE Payments (
+  PaymentID VARCHAR(10),
+  CustomerID VARCHAR(10),
+  ClaimID VARCHAR(10),
+  HospitalID VARCHAR(10),
+  PaymentAmount INT,
+  PaymentDate DATE
+);
+
+//Insert Quries
+INSERT INTO Payments (PaymentID, CustomerID, ClaimID, HospitalID, PaymentAmount, PaymentDate)
+VALUES
+  ('P1', 'C1', 'CL1', 'H1', 1000, '2023-09-01'),
+  ('P2', 'C2', 'CL2', 'H2', 1500, '2023-09-02'),
+  ('P3', 'C3', 'CL3', 'H3', 2000, '2023-09-03'),
+  ('P4', 'C4', 'CL4', 'H4', 1200, '2023-09-04'),
+  ('P5', 'C5', 'CL5', 'H5', 1800, '2023-09-05'),
+  ('P6', 'C6', 'CL6', 'H6', 900, '2023-09-06'),
+  ('P7', 'C7', 'CL7', 'H7', 2200, '2023-09-07'),
+  ('P8', 'C8', 'CL8', 'H8', 1300, '2023-09-08'),
+  ('P9', 'C9', 'CL9', 'H9', 1700, '2023-09-09'),
+  ('P10', 'C10', 'CL10', 'H10', 1100, '2023-09-10');
