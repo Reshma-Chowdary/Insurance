@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Details</title>
+    <style>
+        /* Apply styles to the entire page, including the header */
+        body {
+            background-color: #f5f5f5; /* Change the background color */
+            color: #333; /* Change the text color */
+            font-family: Arial, sans-serif; /* Change the font family */
+            margin: 0; /* Remove body margin */
+            padding: 0; /* Remove body padding */
+        }
+
+        /* Apply styles to the header */
+        header {
+            background-color: #333; /* Change the background color */
+            color: #fff; /* Change the text color */
+            padding: 10px; /* Add some padding */
+            text-align: center; /* Center-align the text */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        /* Apply styles to the section */
+        section {
+            margin: 20px; /* Add margin around the section */
+        }
+
+        /* Apply styles to the h1 headings */
+        h1 {
+            font-size: 24px; /* Change the font size */
+            margin-bottom: 10px; /* Add some spacing at the bottom */
+        }
+
+        /* Apply styles to the spans inside h1 */
+        h1 span {
+            font-weight: bold; /* Make the text bold */
+            color: #007bff; /* Change the text color */
+        }
+
+        /* Apply styles to the table */
+        table {
+            width: 100%; /* Set table width to 100% of its container */
+            border-collapse: collapse; /* Collapse table borders */
+            border-spacing: 0; /* Remove spacing between table cells */
+            margin-bottom: 20px; /* Add margin to the bottom of the table */
+        }
+
+        /* Apply styles to table headers */
+        th {
+            background-color: #333; /* Header background color */
+            color: #fff; /* Header text color */
+            padding: 12px 15px; /* Header cell padding */
+            text-align: left; /* Left-align header text */
+            border-bottom: 2px solid #555; /* Add bottom border to header */
+        }
+
+        /* Apply styles to table rows */
+        tr {
+            background-color: #fff; /* Alternate row background color */
+        }
+
+        /* Apply styles to table cells */
+        td {
+            padding: 10px 15px; /* Cell padding */
+            text-align: left; /* Left-align cell text */
+            border-bottom: 1px solid #ddd; /* Add bottom border to cells */
+        }
+
+        /* Apply styles to table rows on hover */
+        tr:hover {
+            background-color: #f5f5f5; /* Hover row background color */
+        }
+
+        /* Apply styles to links */
+        a {
+            color: #007bff; /* Link text color */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.2s; /* Smooth color transition on hover */
+        }
+
+        /* Apply styles to links on hover */
+        a:hover {
+            color: #0056b3; /* Link text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Available Procedures</h1>
+    </header>
+    <section>
+        <form action="/process-selected-procedures" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Procedure Id</th>
+                        <th>Disease Id</th>
+                        <th>Procedure Name</th>
+                        <th>Icd Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="procedure : ${procedures}">
+                        <td th:text="${procedure.proc_id}"></td>
+                        <td th:text="${procedure.proc_disc_id}"></td>
+                        <td th:text="${procedure.proc_name}"></td>
+                        <td th:text="${procedure.proc_disc_icdcode}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,9 @@
+com\Insurance\DiseaseProcedures\Daos\DiseaseProceduresDaoImpl.class
+com\Insurance\DiseaseProcedures\RowMappers\DiseaseProceduresRowMapper.class
+com\Insurance\DiseaseProcedures\Service\DiseaseProceduresService.class
+com\Insurance\DiseaseProcedures\Models\DiseaseDetails.class
+com\Insurance\DiseaseProcedures\DiseaseProceduresApplication.class
+com\Insurance\DiseaseProcedures\RowMappers\DiseaseDetailsRowMapper.class
+com\Insurance\DiseaseProcedures\Models\DiseaseProcedures.class
+com\Insurance\DiseaseProcedures\Contractor\DiseaseProceduresDao.class
+com\Insurance\DiseaseProcedures\Controllers\ProceduresController.class
