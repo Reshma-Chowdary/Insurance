@@ -119,92 +119,57 @@ CREATE TABLE Proceduress (
 
 
 -- Inserting procedures for Asthma
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (1, 'Asthma Inhaler Therapy', 'J45'),
-    (1, 'Pulmonary Function Test', 'J45');
-
--- Inserting procedures for Type 2 Diabetes
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+    (1, 1, 'Asthma Inhaler Therapy', 'J45'),
+    (2, 1, 'Pulmonary Function Test', 'J45');
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (2, 'Insulin Therapy', 'E11'),
-    (2, 'Blood Glucose Monitoring', 'E11');
-
--- Inserting procedures for Cancer
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+    (3, 2, 'Insulin Therapy', 'E11'),
+    (4, 2, 'Blood Glucose Monitoring', 'E11');
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (3, 'Chemotherapy', 'C50'),
-    (3, 'Radiation Therapy', 'C50');
+    (5, 3, 'Chemotherapy', 'C50'),
+    (6, 3, 'Radiation Therapy', 'C50');
 
 -- Inserting procedures for Heart Disease
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (4, 'Coronary Angioplasty', 'I25'),
-    (4, 'Cardiac Bypass Surgery', 'I25');
+    (7, 4, 'Coronary Angioplasty', 'I25'),
+    (8, 4, 'Cardiac Bypass Surgery', 'I25');
 
 -- Inserting procedures for Migraine
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (5, 'Migraine Medication', 'G43'),
-    (5, 'Biofeedback Therapy', 'G43');
+    (9, 5, 'Migraine Medication', 'G43'),
+    (10, 5, 'Biofeedback Therapy', 'G43');
 
 -- Inserting procedures for Chronic Kidney Disease
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (6, 'Dialysis', 'N18'),
-    (6, 'Kidney Transplant', 'N18');
+    (11, 6, 'Dialysis', 'N18'),
+    (12, 6, 'Kidney Transplant', 'N18');
 
 -- Inserting procedures for Alzheimer's Disease
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (7, 'Memory Training', 'G30'),
-    (7, 'Medication Management', 'G30');
+    (13, 7, 'Memory Training', 'G30'),
+    (14, 7, 'Medication Management', 'G30');
 
 -- Inserting procedures for Hypothyroidism
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (8, 'Thyroid Hormone Replacement', 'E01'),
-    (8, 'Thyroid Function Tests', 'E01');
+    (15, 8, 'Thyroid Hormone Replacement', 'E01'),
+    (16, 8, 'Thyroid Function Tests', 'E01');
 
 -- Inserting procedures for Pancreatic Cancer
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (9, 'Pancreatic Resection', 'C25'),
-    (9, 'Chemoradiotherapy', 'C25');
+    (17, 9, 'Pancreatic Resection', 'C25'),
+    (18, 9, 'Chemoradiotherapy', 'C25');
 
 -- Inserting procedures for Ovarian Cancer
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
+INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
-    (10, 'Ovarian Surgery', 'C56'),
-    (10, 'Chemotherapy for Ovarian Cancer', 'C56');
-
--- Inserting procedures for Hypertension
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
-VALUES
-    (11, 'Antihypertensive Medication', 'I10'),
-    (11, 'Lifestyle Modification', 'I10');
-
--- Inserting procedures for Osteoarthritis
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
-VALUES
-    (12, 'Physical Therapy', 'M15'),
-    (12, 'Joint Replacement Surgery', 'M15');
-
--- Inserting procedures for Influenza
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
-VALUES
-    (13, 'Influenza Vaccination', 'J50'),
-    (13, 'Antiviral Medication', 'J50');
-
--- Inserting procedures for Typhoid
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
-VALUES
-    (14, 'Antibiotic Treatment', 'ICD153'),
-    (14, 'Fluid and Electrolyte Replacement', 'ICD153');
-
--- Inserting procedures for COVID
-INSERT INTO Proceduress (proc_disc_id, proc_name, proc_disc_icdcode)
-VALUES
-    (15, 'COVID-19 Vaccination', 'q100'),
-    (15, 'COVID-19 Testing', 'q100');
-
+    (19, 10, 'Ovarian Surgery', 'C56'),
+    (20, 10, 'Chemotherapy for Ovarian Cancer', 'C56');
