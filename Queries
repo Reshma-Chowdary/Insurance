@@ -173,3 +173,6 @@ INSERT INTO Proceduress (proc_id, proc_disc_id, proc_name, proc_disc_icdcode)
 VALUES
     (19, 10, 'Ovarian Surgery', 'C56'),
     (20, 10, 'Chemotherapy for Ovarian Cancer', 'C56');
+
+
+SELECT setval('proceduress_proc_id_seq', (SELECT MAX(proc_id) FROM PROCEDURESS));
